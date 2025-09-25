@@ -1,0 +1,75 @@
+/*
+    VIS-2 Image Reloader Widget CSS
+    version: "1.0.0"
+    Copyright 2025 lenusch
+*/
+
+/* Main widget container */
+.image-reloader-widget {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+/* Image styling */
+.image-reloader-img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Loading/Error status overlay */
+.image-reloader-status {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    z-index: 10;
+}
+
+.status-text {
+    padding: 8px 16px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 4px;
+    text-align: center;
+}
+
+/* Widget preview in editor */
+.vis-widget_prev .image-reloader-widget {
+    border: 1px dashed #ccc;
+}
+
+/* Responsive behavior */
+.image-reloader-widget img {
+    transition: all 0.2s ease-in-out;
+}
+
+/* Hover effects in edit mode */
+.vis-edit-mode .image-reloader-widget:hover {
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.3);
+}
+
+/* Error state styling */
+.image-reloader-widget.error .image-reloader-img {
+    opacity: 0.5;
+}
+
+/* Loading animation */
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+.image-reloader-widget.loading .image-reloader-img {
+    animation: pulse 1s infinite;
+}

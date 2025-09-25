@@ -1,0 +1,48 @@
+<!--
+    VIS-2 Image Reloader Widget
+    version: "1.0.0"
+    Copyright 2025 lenusch
+-->
+
+<!-- CSS Styles -->
+<link rel="stylesheet" href="widgets/imagereloader/css/imagereloader.css" />
+
+<!-- JavaScript -->
+<script type="text/javascript" src="widgets/imagereloader/js/imagereloader.js"></script>
+
+<!-- Widget Template: Auto Reload Image -->
+<script id="tplImageReloader"
+        type="text/ejs"
+        class="vis-tpl"
+        data-vis-prev='<div id="prev_tplImageReloader" style="position: relative; text-align: initial; padding: 4px;">
+            <div class="vis-widget_prev" style="width: 200px; height: 150px; padding: 2px; background-color: #f0f0f0; border: 1px solid #ccc;">
+                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2VlZSIgc3Ryb2tlPSIjY2NjIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBmaWxsPSIjNjY2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+SW1hZ2UgUmVsb2FkZXI8L3RleHQ+Cjwvc3ZnPgo=" style="width: 100%; height: 100%; object-fit: contain;">
+            </div>
+        </div>'
+        data-vis-attrs="imagePath/text;;imageWidth/slider,50,1000,1;200;px;imageHeight/slider,50,1000,1;150;px;reloadInterval/slider,100,10000,100;1000;ms;fitMode/select,contain,cover,fill,scale-down,none;contain;borderRadius/slider,0,50,1;0;px;showBorder/checkbox;false;borderColor/color;#cccccc;backgroundColor/color;#ffffff"
+        data-vis-set="imagereloader"
+        data-vis-type="helper"
+        data-vis-name="Auto Reload Image">
+    
+    <div class="vis-widget <%== this.data.attr('class') %> image-reloader-widget" 
+         id="<%= this.data.attr('wid') %>"
+         style="width: <%= this.data.attr('imageWidth') || 200 %>px; 
+                height: <%= this.data.attr('imageHeight') || 150 %>px;
+                border-radius: <%= this.data.attr('borderRadius') || 0 %>px;
+                background-color: <%= this.data.attr('backgroundColor') || '#ffffff' %>;
+                <%= this.data.attr('showBorder') ? 'border: 1px solid ' + (this.data.attr('borderColor') || '#cccccc') + ';' : '' %>
+                overflow: hidden;">
+        
+        <img class="image-reloader-img" 
+             style="width: 100%; 
+                    height: 100%; 
+                    object-fit: <%= this.data.attr('fitMode') || 'contain' %>;"
+             alt="Auto reloading image" />
+        
+        <div class="image-reloader-status" style="display: none;">
+            <span class="status-text">Loading...</span>
+        </div>
+    </div>
+    
+    <% vis.binds.imagereloader.tplImageReloader(this.data.wid, this.view, this.data); %>
+</script>

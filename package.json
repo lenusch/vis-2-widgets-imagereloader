@@ -1,0 +1,26 @@
+{
+  "name": "vis-2-widgets-imagereloader",
+  "version": "1.0.0",
+  "description": "VIS-2 widgets for automatic image reloading",
+  "main": "widgets/imagereloader.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lenusch/vis-2-widgets-imagereloader.git"
+  },
+  "keywords": [
+    "iobroker",
+    "vis-2",
+    "widgets",
+    "image",
+    "reload"
+  ],
+  "author": "lenusch",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lenusch/vis-2-widgets-imagereloader/issues"
+  },
+  "homepage": "https://github.com/lenusch/vis-2-widgets-imagereloader#readme"
+}

@@ -1,0 +1,60 @@
+{
+  "common": {
+    "name": "vis-2-widgets-imagereloader",
+    "version": "1.0.0",
+    "news": {
+      "1.0.0": {
+        "en": "Initial release with image reload widget",
+        "de": "Erste Version mit Bild-Neuladen Widget"
+      }
+    },
+    "titleLang": {
+      "en": "Image Reloader Widgets",
+      "de": "Bild-Neuladen Widgets"
+    },
+    "desc": {
+      "en": "VIS-2 widgets for automatic image reloading",
+      "de": "VIS-2 Widgets für automatisches Bild-Neuladen"
+    },
+    "platform": "Javascript/Node.js",
+    "icon": "imagereloader.png",
+    "enabled": true,
+    "mode": "none",
+    "extIcon": "https://raw.githubusercontent.com/lenusch/vis-2-widgets-imagereloader/master/admin/imagereloader.png",
+    "keywords": [
+      "vis-2",
+      "widgets",
+      "image",
+      "reload",
+      "refresh"
+    ],
+    "readme": "https://github.com/lenusch/vis-2-widgets-imagereloader/blob/master/README.md",
+    "authors": [
+      "lenusch <lenusch@example.com>"
+    ],
+    "licenseInformation": {
+      "type": "free",
+      "license": "MIT"
+    },
+    "dependencies": [],
+    "adminUI": {
+      "config": "none"
+    },
+    "files": [
+      "widgets",
+      "admin"
+    ],
+    "onlyWWW": false,
+    "singleton": true,
+    "type": "visualization-widgets",
+    "restartAdapters": [
+      "vis-2"
+    ],
+    "connectionType": "none",
+    "dataSource": "none"
+  },
+  "native": {
+    "dependencies": []
+  },
+  "instanceObjects": []
+}
