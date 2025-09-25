@@ -36,20 +36,24 @@
       "type": "free",
       "license": "MIT"
     },
-    "dependencies": [],
+    "dependencies": [
+      {
+        "js-controller": ">=2.0.0"
+      }
+    ],
     "adminUI": {
       "config": "none"
     },
+    "compact": true,
+    "materialize": true,
     "files": [
       "widgets",
       "admin"
     ],
-    "onlyWWW": false,
-    "singleton": true,
-    "type": "visualization-widgets",
-    "restartAdapters": [
-      "vis-2"
-    ],
+    "onlyWWW": true,
+    "singleton": false,
+    "type": "vis-2",
+    "visWidgets": true,
     "connectionType": "none",
     "dataSource": "none"
   },
